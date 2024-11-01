@@ -1,0 +1,162 @@
+/* Общие стили для текста */
+.main-block h1, .main-block h5, .main-block p, .main-block .btn {
+    font-family: 'Dancing Script', cursive; /* Рукописный стиль */
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8); /* Сильное белое свечение */
+    color: #FFD700; /* Золотой цвет текста */
+}
+
+/* Широкие экраны (1200px и выше) */
+@media (min-width: 1200px) {
+    body {
+        background-color: #000; /* Заливаем белое пространство вокруг чёрным цветом */
+    }
+
+    .main-block {
+        position: relative;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../images/park2.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 829px;
+        background-position: center; /* Центрируем картинку */
+        background-attachment: fixed; /* Фон фиксирован при прокрутке */
+        padding-top: 150px; /* Внутренний отступ сверху */
+        padding-bottom: 50px; /* Внутренний отступ снизу */
+        box-shadow: 0 0 50px 20px rgba(255, 255, 255, 0.8); /* Сильное белое свечение по всем краям */
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .date-block, .place-block {
+        flex: 1;
+        text-align: center;
+        font-style: italic;
+    }
+
+    .date-block {
+        text-align: left;
+        padding-left: 100px; /* Отступ слева для date-block */
+    }
+
+    .place-block {
+        text-align: right;
+        padding-right: 100px; /* Отступ справа для place-block */
+    }
+
+    .name-block {
+        width: 100%;
+        text-align: center;
+        margin: 50px 0;
+    }
+
+    .text-block {
+        width: 100%;
+        text-align: center;
+        margin: 30px auto;
+        max-width: 700px;
+    }
+
+    /* Увеличение шрифта для больших экранов */
+    h1 {
+        font-size: 48px; /* Увеличен размер заголовка */
+    }
+
+    h5 {
+        font-size: 24px; /* Увеличен размер подзаголовков */
+    }
+
+    p {
+        font-size: 20px; /* Увеличен размер основного текста */
+    }
+
+    /* Стили для кнопок */
+    .row:last-child {
+        display: flex;
+        justify-content: center;
+        gap: 20px; /* Увеличиваем расстояние между кнопками */
+        margin-top: 30px;
+    }
+
+    .row:last-child .col-lg-6 {
+        flex: 0 0 auto;
+        text-align: center;
+        max-width: 250px; /* Увеличиваем максимальную ширину для кнопок */
+    }
+
+    .btn {
+        min-width: 200px; /* Увеличиваем минимальную ширину кнопок */
+        font-size: 20px; /* Увеличиваем размер шрифта кнопок */
+        padding: 12px 25px; /* Увеличиваем отступы внутри кнопок */
+        box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8); /* Сильное белое свечение для кнопок */
+    }
+}
+
+/* Мобильные устройства (до 575px) */
+@media (max-width: 575px) {
+    .main-block {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../images/park2.jpg');
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        min-height: 829px;
+        padding-top: 50px; /* Отступ сверху для растяжки контента */
+        padding-bottom: 50px; /* Отступ снизу для растяжки контента */
+    }
+
+    .main-block h1,
+    .main-block h5,
+    .main-block p {
+        font-size: 1.5rem; /* Увеличь это значение в зависимости от нужного размера */
+    }
+
+    .btn {
+        font-size: 1.5rem; /* Увеличь размер текста в кнопках */
+    }
+
+    .main-block h1 {
+        font-size: 2rem; /* Отдельно для заголовка */
+    }
+
+    .row {
+        display: block;
+        text-align: center;
+        margin-bottom: 70px; /* Увеличиваем расстояние между блоками */
+    }
+
+    .date-block, .place-block {
+        padding: 0;
+        text-align: center;
+        margin-bottom: 20px;
+        font-style: italic;
+    }
+
+    .name-block {
+        margin: 30px 0;
+    }
+
+    .text-block {
+        margin: 30px 0;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    /* Исправляем отступы кнопок для симметрии */
+    .row:last-child {
+        display: flex;
+        justify-content: center;
+        gap: 10px; /* Уменьшаем расстояние между кнопками */
+        padding: 0 20px; /* Симметричные отступы для кнопок */
+    }
+
+    .btn {
+        width: 100%; /* Кнопки занимают всю ширину на мобильных устройствах */
+        max-width: 200px;
+        padding: 12px 30px;
+        font-size: 16px; /* Размер шрифта кнопок на мобильных устройствах */
+    }
+}
